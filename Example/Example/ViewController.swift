@@ -79,12 +79,14 @@ class ViewController: UIViewController {
 		
 	}
 
-	func showPopover(_ vc: UIViewController, from barButtonItem: UIBarButtonItem) {
+	func showPopover(_ vc: PanelViewController, from barButtonItem: UIBarButtonItem) {
 
-		vc.modalPresentationStyle = .popover
-		vc.popoverPresentationController?.barButtonItem = barButtonItem
+//		vc.modalPresentationStyle = .popover
+//		vc.popoverPresentationController?.barButtonItem = barButtonItem
 
-		present(vc, animated: true, completion: nil)
+//		present(vc, animated: true, completion: nil)
+		
+		float(vc, at: CGRectMake(0, 0, 100, 100))
 		
 	}
 
@@ -92,6 +94,14 @@ class ViewController: UIViewController {
 
 extension ViewController: PanelManager {
 
+	var allowFloatingPanels: Bool {
+		return true
+	}
+	
+	var allowPanelPinning: Bool {
+		return true
+	}
+	
 	var panelContentWrapperView: UIView {
 		return contentWrapperView
 	}
