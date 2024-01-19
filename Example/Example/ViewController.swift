@@ -26,15 +26,15 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		mapPanelContentVC = storyboard?.instantiateViewController(withIdentifier: "MapPanelContentViewController") as! MapPanelContentViewController
+		mapPanelContentVC = (storyboard?.instantiateViewController(withIdentifier: "MapPanelContentViewController") as! MapPanelContentViewController)
 
 		mapPanelVC = PanelViewController(with: mapPanelContentVC, in: self)
 
-		textPanelContentVC = storyboard?.instantiateViewController(withIdentifier: "TextPanelContentViewController") as! TextPanelContentViewController
+		textPanelContentVC = (storyboard?.instantiateViewController(withIdentifier: "TextPanelContentViewController") as! TextPanelContentViewController)
 
 		textPanelVC = PanelViewController(with: textPanelContentVC, in: self)
 
-		text2PanelContentVC = storyboard?.instantiateViewController(withIdentifier: "Text2PanelContentViewController") as! Text2PanelContentViewController
+		text2PanelContentVC = (storyboard?.instantiateViewController(withIdentifier: "Text2PanelContentViewController") as! Text2PanelContentViewController)
 		
 		text2PanelVC = PanelViewController(with: text2PanelContentVC, in: self)
 		
