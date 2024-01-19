@@ -25,13 +25,13 @@ class Text2PanelContentViewController: UIViewController, PanelContentDelegate {
 	}
 	
 	var minimumPanelContentSize: CGSize {
-		return CGSize(width: 240, height: 260)
+		return CGSize(width: 100, height: 100)
 	}
 	
-	let preferredPanelContentSize = CGSize(width: 320, height: 400)
+	let preferredPanelContentSize = CGSize(width: 100, height: 100)
 	
 	var preferredPanelPinnedHeight: CGFloat {
-		return 260
+		return 100
 	}
 	
 }
