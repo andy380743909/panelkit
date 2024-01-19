@@ -109,7 +109,7 @@ extension PanelManager {
 					continue
 				}
 
-				pinnedPanel.pinnedMetadata?.index = prevPinnedPanels.index(of: pinnedPanel) ?? 0
+                pinnedPanel.pinnedMetadata?.index = prevPinnedPanels.firstIndex(of: pinnedPanel) ?? 0
 
 			}
 			
@@ -251,7 +251,7 @@ extension PanelManager {
 					continue
 				}
 
-				pinnedPanel.pinnedMetadata?.index = prevPinnedPanels.index(of: pinnedPanel) ?? 0
+                pinnedPanel.pinnedMetadata?.index = prevPinnedPanels.firstIndex(of: pinnedPanel) ?? 0
 
 			}
 

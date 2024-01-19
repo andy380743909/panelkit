@@ -13,7 +13,7 @@ import UIKit
 ///
 /// Typically the `PanelManager` protocol is implemented on a `UIViewController` subclass.
 /// If not, you should specify the `managerViewController` property.
-public protocol PanelManager: class {
+public protocol PanelManager: AnyObject {
 
 	/// The ```UIViewController``` that manages the panels and contains
 	/// ```panelContentWrapperView``` and ```panelContentView```.

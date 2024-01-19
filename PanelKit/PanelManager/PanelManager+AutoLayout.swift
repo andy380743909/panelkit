@@ -127,7 +127,7 @@ extension PanelManager {
 			
 			if pinnedMetadata.index > 0, !keyboardShown {
 				
-				var panelsPinned = self.panelsPinned(at: pinnedMetadata.side).sorted { (p1, p2) -> Bool in
+                let panelsPinned = self.panelsPinned(at: pinnedMetadata.side).sorted { (p1, p2) -> Bool in
 					return p1.pinnedMetadata?.index ?? 0 < p2.pinnedMetadata?.index ?? 0
 				}
 				
@@ -201,7 +201,7 @@ extension PanelManager {
 			
 			if let pinnedMetadata = panel.pinnedMetadata, pinnedMetadata.index > 0, !keyboardShown {
 				
-				var panelsPinned = self.panelsPinned(at: pinnedMetadata.side).sorted { (p1, p2) -> Bool in
+                let panelsPinned = self.panelsPinned(at: pinnedMetadata.side).sorted { (p1, p2) -> Bool in
 					return p1.pinnedMetadata?.index ?? 0 < p2.pinnedMetadata?.index ?? 0
 				}
 				

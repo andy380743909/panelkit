@@ -10,7 +10,7 @@ import UIKit
 
 /// PanelContentDelegate determines the panel size and allows
 /// you to get notified for certain events.
-public protocol PanelContentDelegate: class {
+public protocol PanelContentDelegate: AnyObject {
 
 	/// The title for the close button in the navigation bar.
 	var closeButtonTitle: String { get }

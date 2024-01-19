@@ -22,8 +22,11 @@ extension PanelFloatingState: Hashable {
 		return lhs.relativePosition == rhs.relativePosition && lhs.zIndex == rhs.zIndex
 	}
 	
-	public var hashValue: Int {
-		return zIndex.hashValue
-	}
+//	public var hashValue: Int {
+//		return zIndex.hashValue
+//	}
 	
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(zIndex)
+    }
 }
