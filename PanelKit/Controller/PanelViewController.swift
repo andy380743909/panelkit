@@ -170,8 +170,11 @@ import UIKit
 		super.viewWillAppear(animated)
 
 		didUpdateFloatingState()
+        #if false
 		contentViewController?.viewWillAppear(animated)
-
+        #else
+        contentViewController?.beginAppearanceTransition(true, animated: animated)
+        #endif
 		contentDelegate?.didUpdateFloatingState()
 		contentDelegate?.updateNavigationButtons()
 
@@ -186,7 +189,13 @@ import UIKit
 
 		didUpdateFloatingState()
 		contentViewController?.viewDidAppear(animated)
-
+        
+#if false
+        contentViewController?.viewDidAppear(animated)
+#else
+        contentViewController?.endAppearanceTransition()
+#endif
+        
 		if logLevel == .full {
 			print("\(self) viewDidAppear")
 		}
@@ -196,8 +205,12 @@ import UIKit
 	override public func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
 
-		contentViewController?.viewWillDisappear(animated)
-
+#if false
+        contentViewController?.viewWillDisappear(animated)
+#else
+        contentViewController?.beginAppearanceTransition(false, animated: animated)
+#endif
+        
 		if logLevel == .full {
 			print("\(self) viewWillDisappear")
 		}
@@ -207,7 +220,11 @@ import UIKit
 	override public func viewDidDisappear(_ animated: Bool) {
 		super.viewDidDisappear(animated)
 
-		contentViewController?.viewDidDisappear(animated)
+#if false
+        contentViewController?.viewDidDisappear(animated)
+#else
+        contentViewController?.endAppearanceTransition()
+#endif
 
 		if logLevel == .full {
 			print("\(self) viewDidDisappear")
@@ -271,7 +288,8 @@ import UIKit
 
         superview.bringSubviewToFront(self.resizeCornerHandle)
         superview.bringSubviewToFront(viewToMove)
-
+        
+        postDidActiveNotification()
 	}
 
 	// MARK: -

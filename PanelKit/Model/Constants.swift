@@ -32,11 +32,11 @@ let panelPopYOffset: CGFloat = 12.0
 
 // PanelViewController
 
-let cornerRadius: CGFloat = 16.0
+let cornerRadius: CGFloat = 8.0
 
 // Panel shadow
 
 let shadowRadius: CGFloat = 8.0
 let shadowOpacity: Float = 0.3
-let shadowOffset: CGSize = CGSize(width: 0, height: 10.0)
+let shadowOffset: CGSize = CGSize(width: 0, height: 0.0)
 let shadowColor =  UIColor.black.cgColor
